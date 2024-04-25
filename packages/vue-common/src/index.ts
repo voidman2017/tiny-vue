@@ -161,6 +161,44 @@ export const customDesignConfig: CustomDesignConfig = {
   designConfig: null
 }
 
+/**
+ * 
+ * 参数解构和初始处理
+函数参数：
+props：组件的props。
+context：包含Vue组件上下文的对象，如slots和emit。
+renderless：一个可选的渲染函数，通常用于高阶组件或库。
+api：可能是一组方法或属性，用于暴露给组件的父级。
+extendOptions：用于扩展或修改组件功能的额外选项。
+mono：一个布尔值，指示是否为单层组件，影响API的继承行为。
+classes：可能用于定义组件特定样式的类名映射。
+render函数选择：
+根据props.tiny_renderless的值确定，否则使用renderless参数。
+配置和环境处理
+配置读取：
+从全局通过inject引入配置（如设计配置），并根据组件名称获取特定配置。
+环境判定：
+检查当前是否为特定环境（如PC），通过检测process对象。
+工具和API准备
+工具集（utils）：
+包括国际化函数t、类合并函数（mergeClass，条件性添加）、断点工具（useBreakpoint）、主题解析函数等。
+包含设计和全局设计配置。
+API和全局配置合并：
+根据设计配置中可能存在的renderless函数，调整sdk对象。
+属性和方法定义
+属性集（attrs）：
+包括工具函数和数据对象，如过滤器绑定、属性过滤器等。
+getElementCssClass函数用于从类映射中获取特定键的类名。
+动态属性注入：
+对于Vue 2环境下this.slots不更新的问题，使用defineInstanceProperties和defineParentInstanceProperties动态设置。
+组件初始化与API处理
+组件初始化：
+调用initComponent来进行组件特有的初始化操作。
+API处理：
+如果API是数组，则根据设计配置中定义的API扩展。
+将API方法或属性添加到attrs，以便父组件可以通过ref访问。
+ * 
+ */
 export const setup = ({ props, context, renderless, api, extendOptions = {}, mono = false, classes = {} }) => {
   const render = typeof props.tiny_renderless === 'function' ? props.tiny_renderless : renderless
 
