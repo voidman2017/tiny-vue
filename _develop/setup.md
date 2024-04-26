@@ -8,7 +8,7 @@
 
 这里对setup进行了封装，调用 packages/vue-common/src/index.ts 中封装的setup方法返回一个对象会暴露给模板和组件实例。
 
-接下里逐步解析封装的目的
+接下里逐步解析封装的目的。
 
 packages/vue-common/src/index.ts 中封装的setup
 
@@ -95,3 +95,13 @@ export const setup = ({ props, context, renderless, api, extendOptions = {}, mon
   return attrs
 }
 ```
+
+setup接收一个对象参数：
+
+- props：组件的props
+- context：包含Vue组件上下文的对象，如slots和emit
+- renderless：
+- api
+- extendOptions
+- mono
+- classes = {}

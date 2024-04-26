@@ -194,7 +194,7 @@ export default {
       currMd: hooks.computed(() => mds[`${modeState.pathName}.cn.md`]),
       demoLoading: false
     })
-    // hui chart 新增图表类型，新增图表的 api 和原有图表的api 区分开。 
+    // hui chart 新增图表类型，新增图表的 api 和原有图表的api 区分开。
     const huiNewChart = ['chart-process']
     const fn = {
       // 菜单搜索：忽略大小写

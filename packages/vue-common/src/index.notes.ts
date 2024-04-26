@@ -1,3 +1,19 @@
+/**
+ hooks 从 adapter 引入 virtual:common/adapter/vue
+ 这里  virtual: 是别名。
+ internals/cli/src/config/vite.ts:33
+ 'virtual:common/adapter/vue': pathFromWorkspaceRoot(`packages/vue-common/src/adapter/vue${vueVersion}/index`)
+ 设置了 alias ，指向对应版本
+
+ vue2:
+  packages/vue-common/src/adapter/vue2/index.ts:10 实现 hooks 指向 @vue/composition-api。 所以打印 hooks，发现 hooks.version 是 1.7.2 (packages/vue-common/src/adapter/vue2/package.json中锁定了版本)
+ vue2.7:
+ packages/vue-common/src/adapter/vue2.7/index.ts:13 ,直接引用vue，所以version 是2.7.10 (packages/vue-common/src/adapter/vue2.7/package.json中锁定了版本)
+ vue3:
+ packages/vue-common/src/adapter/vue3/index.ts:12，直接引用vue，所以 version 是 3.x.x
+
+ 这里有个重要的库，@vue/composition-api。其目的是为了在vue2.7之前的版本使用组合式API
+ */
 import hooks from './adapter'
 import {
   appContext,
@@ -25,6 +41,8 @@ import '@opentiny/vue-theme/base/index.less'
 import { defineComponent, isVue2, isVue3 } from './adapter'
 import { useBreakpoint } from './breakpoint'
 import { useDefer } from './usedefer'
+
+console.log('===debug=== hooks: ', hooks)
 
 export { useBreakpoint, useDefer }
 
@@ -161,6 +179,18 @@ export const customDesignConfig: CustomDesignConfig = {
   designConfig: null
 }
 
+/**
+以组件 button 为例
+packages/vue/src/button/src/pc.vue:73 调用以下 setup 函数返回一个对象，即 composition-api 模式下 setup 函数中需要返回的对象
+
+render (packages/vue-common/src/index.ts:165 ) : 忽略 props.tiny_renderless，即组件中传入的 renderless。packages/vue/src/button/src/pc.vue:45 从 packages/renderless/src/button/vue.ts 中引入相关逻辑
+即render函数指向 packages/renderless/src/button/vue.ts:18 定义的 renderless 函数。该函数将会在 packages/vue-common/src/index.ts:186 被调用，分别传入 props, hooks, utils, extendOptions
+props:
+hooks:
+utils: 常用的：vm, parent, emit, constants, childrenHandler, dispatch, slots 
+extendOptions:
+
+ */
 export const setup = ({ props, context, renderless, api, extendOptions = {}, mono = false, classes = {} }) => {
   const render = typeof props.tiny_renderless === 'function' ? props.tiny_renderless : renderless
 

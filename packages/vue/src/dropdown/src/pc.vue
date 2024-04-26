@@ -102,7 +102,7 @@ export default defineComponent({
     return setup({ props, context, renderless, api, h })
   },
   render() {
-    const { splitButton, type, disabled, handl6eMainButtonClick, menuOptions, title, suffixIcon } = this
+    const { splitButton, type, disabled, handleMainButtonClick, menuOptions, title, suffixIcon } = this
     const { slots, size, state, border, showIcon, round, clickOutside } = this
 
     const params = { visible: state.visible }
