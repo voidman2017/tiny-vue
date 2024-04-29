@@ -99,7 +99,7 @@ export const setup = ({ props, context, renderless, api, extendOptions = {}, mon
 setup接收一个对象参数：
 
 - props：组件的props
-- context：包含Vue组件上下文的对象，如slots和emit
+- context：包含Vue组件上下文的对象
 - renderless：
 - api
 - extendOptions

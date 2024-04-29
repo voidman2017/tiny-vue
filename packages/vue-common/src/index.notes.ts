@@ -12,6 +12,8 @@
  vue3:
  packages/vue-common/src/adapter/vue3/index.ts:12，直接引用vue，所以 version 是 3.x.x
 
+总结hooks主要用于管理Vue的组合式API（Composition API）。这些适配器使得不同版本的Vue可以使用统一的API接口，主要是为了兼容性和代码重用。
+
  这里有个重要的库，@vue/composition-api。其目的是为了在vue2.7之前的版本使用组合式API
  */
 import hooks from './adapter'
@@ -71,6 +73,21 @@ export const props: Array<
   | 'tiny_chart_theme'
 > = ['tiny_mode', 'tiny_mode_root', 'tiny_template', 'tiny_renderless', '_constants', 'tiny_theme', 'tiny_chart_theme']
 
+/**
+ * 
+resolveMode 函数的主要作用是确定组件运行的模式。这个函数可以帮助组件根据不同的环境（例如桌面或移动设备）来调整它们的行为或样式。具体来说，这个函数通过以下几个步骤来确定最终的模式：
+
+参数读取：首先，它尝试从组件的 props 中读取 tiny_mode 属性。
+注入读取：如果 props 中没有指定，它会尝试从 Vue 的依赖注入系统中读取 TinyMode。
+全局配置：如果上述两者都未指定，它会使用全局配置中的 tiny_mode。
+函数内部有一个 isRightMode 的辅助函数，用来检查给定的模式是否为有效的模式（目前支持的模式有 'pc', 'mobile', 'mobile-first'）。
+
+最终，如果在 props、注入或全局配置中定义了有效的模式，resolveMode 将返回这个模式。如果这些途径都没有定义有效的模式，则默认返回 'pc'。
+此外，如果组件的 props 中设置了 tiny_mode_root 为 true，那么这个模式还会被提供给所有子组件，允许子组件也根据这个模式来调整自己的行为。
+这个函数的实现保证了组件能够灵活适应不同的运行环境，使得开发者可以编写更加通用和适应性强的组件。
+
+在web端返回值为pc
+ */
 export const resolveMode = (props, context) => {
   let isRightMode = (mode) => ~['pc', 'mobile', 'mobile-first'].indexOf(mode)
   let config = rootConfig(context)
@@ -103,7 +120,7 @@ export const resolveMode = (props, context) => {
 
   Object.defineProperty(instance, '_tiny_mode', { value: tinyMode })
 
-  return tinyMode
+  return tinyMode // web端返回 pc
 }
 
 export const resolveTheme = (props, context) => {
@@ -180,18 +197,29 @@ export const customDesignConfig: CustomDesignConfig = {
 }
 
 /**
-以组件 button 为例
-packages/vue/src/button/src/pc.vue:73 调用以下 setup 函数返回一个对象，即 composition-api 模式下 setup 函数中需要返回的对象
+ * 
+ setup 函数接受一个对象，对象中包含若干属性，重点关注其中 props、context、 renderless、 api 4个属性。该函数在组件 .vue 文件 setup 中被调用，最终返回一个 composition-api 模式下 setup 函数中需要返回的对象
+ 这么做的目的有两个：
+ 1、抹平不同vue版本之间的插件
+ 2、setup函数中提供公共方法
+  
+ 函数整体逻辑：
+ 1、定义render方法，通常来自于组件对应的renderless方法
+ 2、获取组件级配置和全局配置，定义utils工具方法
+ 3、执行render方法获取sdk
+ 4、定义返回对象基础模板 attrs，包括工具方法、国际化等
+ 5、遍历组件renderless中定义的api集合，合并到attrs，通常包括state和事件等
+ 6、返回attrs对象
 
-render (packages/vue-common/src/index.ts:165 ) : 忽略 props.tiny_renderless，即组件中传入的 renderless。packages/vue/src/button/src/pc.vue:45 从 packages/renderless/src/button/vue.ts 中引入相关逻辑
-即render函数指向 packages/renderless/src/button/vue.ts:18 定义的 renderless 函数。该函数将会在 packages/vue-common/src/index.ts:186 被调用，分别传入 props, hooks, utils, extendOptions
-props:
-hooks:
-utils: 常用的：vm, parent, emit, constants, childrenHandler, dispatch, slots 
-extendOptions:
 
+以组件 carousel 为例
+packages/vue/src/carousel/src/pc.vue:102 调用以下 setup 函数返回一个对象，即 composition-api 模式下 setup 函数中需要返回的对象
  */
 export const setup = ({ props, context, renderless, api, extendOptions = {}, mono = false, classes = {} }) => {
+  /**
+  render (packages/vue-common/src/index.ts:165 ) : 忽略 props.tiny_renderless，即组件中传入的 renderless。packages/vue/src/button/src/pc.vue:45 从 packages/renderless/src/button/vue.ts 中引入相关逻辑
+  即render函数指向 packages/renderless/src/carousel/vue.ts:148 定义的 renderless 函数。
+   */
   const render = typeof props.tiny_renderless === 'function' ? props.tiny_renderless : renderless
 
   // 获取组件级配置和全局配置（inject需要带有默认值，否则控制台会报警告）
@@ -200,12 +228,12 @@ export const setup = ({ props, context, renderless, api, extendOptions = {}, mon
 
   const specifyPc = typeof process === 'object' ? process.env?.TINY_MODE : null
   const utils = {
-    $prefix,
-    t,
-    ...tools(context, resolveMode(props, context)),
-    designConfig,
-    globalDesignConfig,
-    useBreakpoint
+    $prefix, // 字符串，通常用作组件命名的前缀，帮助确保组件名的全局唯一性。
+    t, // 一个函数，用于国际化和本地化，通常用来翻译文本。
+    ...tools(context, resolveMode(props, context)), // 展开了由 `tools` 函数返回的对象，该函数根据当前上下文和模式提供各种实用工具和服务。
+    designConfig, // 一个对象，包含特定于当前组件的设计配置，可能包括样式、行为等设置。
+    globalDesignConfig, // 一个对象，包含全局的设计配置，影响整个应用的组件。
+    useBreakpoint // 一个函数或钩子，用于根据当前的屏幕尺寸或视口特性来调整组件的布局或行为。
   }
   if (specifyPc !== 'pc') {
     utils.mergeClass = mergeClass
@@ -213,6 +241,15 @@ export const setup = ({ props, context, renderless, api, extendOptions = {}, mon
 
   utils.vm.theme = resolveTheme(props, context)
   utils.vm.chartTheme = resolveChartTheme(props, context)
+  /**
+  render函数通常来自于组件的renderless方法。
+    props:组件接受的props
+    hooks:不同版本vue对应的hooks，用于管理Vue的组合式API。这样在组件rederless方法中可以使用 ref、reactive、watch、computed、 生命周期等 composition api
+    utils: 工具方法。常用的：vm, parent, emit, constants, childrenHandler, dispatch, slots 
+    extendOptions
+
+    通过调用 renderless 方法，返回一组模板需要的api。最终在后续 packages/vue-common/src/index.ts:222编译api，合并到attrs，返回.vue单文件组件 setup 需要的对象，会暴露给模板和组件实例
+   */
   const sdk = render(props, hooks, utils, extendOptions)
 
   // 加载全局配置，合并api
