@@ -44,8 +44,6 @@ import { defineComponent, isVue2, isVue3 } from './adapter'
 import { useBreakpoint } from './breakpoint'
 import { useDefer } from './usedefer'
 
-console.log('===debug=== hooks: ', hooks)
-
 export { useBreakpoint, useDefer }
 
 export { version } from '../package.json'
@@ -150,8 +148,24 @@ const resolveChartTheme = (props, context) => {
   return tinyChartTheme
 }
 
+/**
+在组件初始化时根据当前的 props 和 context 动态决定组件的渲染逻辑和展示内容。
+通过使用 Vue 的响应式系统（如 computed）和异步组件机制（defineAsyncComponent），这个函数为构建动态和高度可配置的组件提供了强大的支持
+该方法通常会在 packages/vue/src/{组件}/src/index.ts 中被调用。目的就是为了实现pc端和移动端的兼容适配
+*/
 export const $setup = ({ props, context, template, extend = {} }) => {
+  /* 
+  1.模式解析：
+  调用 resolveMode 函数来确定当前组件的模式（如 'pc', 'mobile'）。该函数基于 props 和 context 来决定最合适的模式。
+  */
   const mode = resolveMode(props, context)
+  /* 
+  2.视图的计算属性：
+  使用 Vue 的 computed 创建一个计算属性 view。
+  在 view 的计算过程中，首先检查 props.tiny_template 是否被定义。如果已定义，直接使用这个模板。
+  如果 props.tiny_template 未定义，会调用 template 函数（packages/vue/src/{组件}/src/index.ts引入pc.vue或者mobile-first.vue）生成一个组件，这个函数接收解析得到的模式和 props 作为参数。
+  如果 template 函数返回一个函数（即一个动态组件定义），则使用 defineAsyncComponent 来异步定义这个组件。否则，直接使用返回的组件。
+  */
   const view = hooks.computed(() => {
     if (typeof props.tiny_template !== 'undefined') return props.tiny_template
 
@@ -160,6 +174,11 @@ export const $setup = ({ props, context, template, extend = {} }) => {
     return typeof component === 'function' ? defineAsyncComponent(component) : component
   })
 
+  /* 
+  3.渲染组件：
+  调 renderComponent（packages/vue-common/src/adapter/vue3/index.ts） 函数来渲染组件。这个函数接受一个对象，其中包含了计算得到的 view、传递给 $setup 的 props、context 以及一个扩展对象 extend。
+  最终调用 h 渲染函数实现组件渲染
+  */
   return renderComponent({ view, props, context, extend })
 }
 
