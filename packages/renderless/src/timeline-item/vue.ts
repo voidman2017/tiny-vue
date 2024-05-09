@@ -40,7 +40,7 @@ export const renderless = (
 ): ITimelineItemApi => {
   const api = {} as ITimelineItemApi
 
-  const { timelineItems, nodes, props: rootProps } = inject('nodesInject') as ITimelineInject
+  const { timelineItems, nodes, props: rootProps } = inject('nodesInject') as ITimelineInject // 注入父组件提供的数据
   timelineItems.push(props.node)
 
   const state: ITimelineItemState = reactive({

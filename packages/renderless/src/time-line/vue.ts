@@ -69,7 +69,7 @@ export const renderless = (
     toggleFold: toggleFold({ props })
   })
 
-  provide('nodesInject', { timelineItems: state.timelineItems, nodes: state.nodes, props })
+  provide('nodesInject', { timelineItems: state.timelineItems, nodes: state.nodes, props }) // 通过provide向子组件timeline-item传递数据
 
   watch(
     () => state.timelineItems,

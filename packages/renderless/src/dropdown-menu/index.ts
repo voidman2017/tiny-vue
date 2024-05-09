@@ -158,6 +158,7 @@ export const useVuePopper = ({
     }
   })
 
+  /* note: 【下拉菜单显示】-3  这里会改变 popper.showPopper.value ；引起 packages/renderless/src/common/deps/vue-popper.ts 中 watch 监听回调执行 */
   parent.$on('visible', (value) => {
     state.showPopper = value
     popper.showPopper.value = value

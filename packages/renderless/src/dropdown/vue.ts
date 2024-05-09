@@ -43,7 +43,7 @@ export const api = ['state', 'handleMainButtonClick', 'hide', 'show', 'initDomOp
 
 export const renderless = (
   props: IDropdownProps,
-  { reactive, watch, provide, onMounted, computed }: ISharedRenderlessParamHooks,
+  { reactive, watch, provide, onMounted, computed, onBeforeUnmount }: ISharedRenderlessParamHooks,
   { emit, parent, broadcast, vm, nextTick, mode, designConfig }: IDropdownRenderlessParamUtils
 ): IDropdownApi => {
   const api = {} as IDropdownApi
@@ -92,6 +92,9 @@ export const renderless = (
   watch(() => state.focusing, api.watchFocusing)
 
   onMounted(api.mounted)
+
+  /* fixme: 目前版本没有执行beforeDistory */
+  onBeforeUnmount(api.beforeDistory)
 
   return api
 }

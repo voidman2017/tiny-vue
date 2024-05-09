@@ -175,6 +175,10 @@ export const handleClick =
       emit('item-click', data)
     }
     // 此处需要传递一个对象，如果是数组[param1,param2],会导致vue2和vue3的表现形式不一样,aui 目前还是数组形式
+    /* note: 【dropdown - 菜单项点击】-2 
+    dispatch 方法源自 packages/vue-common/src/adapter/vue3/index.ts ，会遍历向上查找对应注册的父组件，执行  packages/vue-common/src/adapter/utils.ts 中 emit 方法
+    最终触发  packages/renderless/src/dropdown/index.ts 中监听的事件
+    */
     dispatch('TinyDropdown', 'menu-item-click', data)
     dispatch('TinyDropdown', 'is-disabled', [props.disabled])
     dispatch('TinyDropdown', 'selected-index', [state.currentIndex])

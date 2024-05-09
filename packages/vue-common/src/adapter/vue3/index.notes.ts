@@ -370,8 +370,8 @@ export const tools = (context, mode) => {
     router, // Vue 路由器实例，用于编程式导航和路由管理。
     dispatch, // 用于向上派发事件，直到找到第一个监听该事件的组件。
     broadcast, // 用于向下广播事件到所有子组件，无论子组件是否监听该事件。
-    parentHandler, // 父组件处理器，可能用于获取父组件的信息或调用父组件的方法。
-    childrenHandler, // 子组件处理器，可能用于操作或获取子组件的状态。
+    parentHandler, // 父组件处理器，用于获取父组件的信息或调用父组件的方法。
+    childrenHandler, // 子组件处理器，用于操作或获取子组件的状态。
     i18n, // 国际化实例，用于支持多语言功能。
     refs, // 一个对象，用于存储和访问组件内部的 refs，以方便直接操作 DOM 或组件实例。
     slots: instance?.slots, // 当前组件的插槽对象，包含了所有插入到组件中的内容。
@@ -383,8 +383,8 @@ export const tools = (context, mode) => {
     mode, // 当前的运行模式（如 'pc' 或 'mobile'），影响组件的响应式和适配行为。
     isPCMode: mode === 'pc', // 布尔值，指示当前是否为 PC 模式。
     isMobileMode: mode === 'mobile', // 布尔值，指示当前是否为移动模式。
-    service: root?.$service, // 根实例上的服务对象，可能用于处理业务逻辑或 API 调用。
-    getService: () => root?.$getService(vm), // 函数，用于获取服务实例，可能与 service 相关联，但允许传入特定的 vm。
+    service: root?.$service, // ？？？根实例上的服务对象，用于处理业务逻辑或 API 调用。
+    getService: () => root?.$getService(vm), // ？？函数，用于获取服务实例，与 service 相关联，但允许传入特定的 vm。
     setParentAttribute, // 函数，用于设置父组件的属性值，方便状态管理和组件间通信。
     defineInstanceProperties, // 函数，用于定义或修改 vm 实例的属性。
     defineParentInstanceProperties // 函数，用于定义或修改父组件实例的属性。

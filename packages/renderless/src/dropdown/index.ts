@@ -17,7 +17,11 @@ import { addClass, removeClass, on, off } from '../common/deps/dom'
 export const watchVisible =
   ({ broadcast, emit, nextTick }: Pick<IDropdownRenderlessParams, 'broadcast' | 'emit' | 'nextTick'>) =>
   (value: boolean) => {
-    broadcast('TinyDropdownMenu', 'visible', value)
+    broadcast(
+      'TinyDropdownMenu',
+      'visible',
+      value
+    ) /* note:【下拉菜单显示】-2 这里会通过 broadcast 发送事件名为 visible 的事件通知 。进而触发 packages/renderless/src/dropdown-menu/index.ts 中   parent.$on('visible'）的事件监听 */
 
     /**
      * 此处必须延时处理，不然 Vue3 环境下会从 nextTick 冒出一个错误：
@@ -49,7 +53,8 @@ export const show =
 
     state.timeout = setTimeout(
       () => {
-        state.visible = true
+        state.visible =
+          true /* note:【下拉菜单显示】-1 当触发下拉菜单显示 ，会改变 state.visible ； packages/renderless/src/dropdown/vue.ts 中 watch 监听了 state.visible 变化，因此变化会导致执行 watchVisible */
       },
       state.trigger === 'click' ? 0 : props.showTimeout
     )
@@ -183,6 +188,11 @@ const toggleFocus =
     state.focusing = value
   }
 
+/* note: 【dropdown初始化】 
+事件绑定: 
+1.根据props.spliteButton，确定事件触发元素
+2. 根据 props.trigger 给事件触发元素绑定事件
+*/
 export const initEvent =
   ({ api, props, state, vm, mode }: Pick<IDropdownRenderlessParams, 'api' | 'props' | 'state' | 'vm' | 'mode'>) =>
   () => {
@@ -215,6 +225,10 @@ export const initEvent =
     }
   }
 
+/* note: 【dropdown - 菜单项点击】-3 
+响应菜单项点击。如果 dropdown 的 props.hideOnClick 且当前菜单项的 props.disabled 不为 true，则设置 state.visble = false。隐藏菜单项
+如果菜单项的 props.disabled 不为 true，emit('item-click', data)，触发事件 item-click，传递点击的菜单项数据
+*/
 export const handleMenuItemClick =
   ({ props, state, emit }: Pick<IDropdownRenderlessParams, 'props' | 'state' | 'emit'>) =>
   ({ itemData, vm, disabled }) => {
@@ -239,7 +253,7 @@ export const initDomOperation =
     state.menuItems = state.dropdownElm?.querySelectorAll('[tabindex="-1"]')
     state.menuItemsArray = [].slice.call(state.menuItems)
 
-    api.initEvent()
+    api.initEvent() // packages/renderless/src/dropdown-menu/index.ts:138 中调用
     api.initAria()
   }
 
@@ -257,6 +271,12 @@ export const mounted =
       state.showIcon = false
     }
 
+    /* note:【dropdown - 菜单项点击】-1
+    vm.$on 源自 packages/vue-common/src/adapter/utils.ts 中 on 方法 
+    这里通过 on 方法监听菜单项点击
+    由 packages/renderless/src/dropdown-item/index.ts 中 dispatch 该事件
+    最终执行 handleMenuItemClick 
+    */
     vm.$on('menu-item-click', api.handleMenuItemClick)
     vm.$on('current-item-click', api.handleMenuItemClick)
     vm.$on('selected-index', (selectedIndex) => {

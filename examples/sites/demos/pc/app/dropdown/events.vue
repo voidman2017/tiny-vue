@@ -1,7 +1,8 @@
 <template>
   <div>
     <p>场景1：按钮类型 + 循环 tiny-dropdown-item</p>
-    <tiny-dropdown split-button @item-click="itemClick" @button-click="buttonClick" @visible-change="visibleChange">
+    <button @click="dropdownShow = false"></button>
+    <tiny-dropdown v-if="dropdownShow" @item-click="itemClick" @button-click="buttonClick" @visible-change="visibleChange">
       <template #dropdown>
         <tiny-dropdown-menu>
           <tiny-dropdown-item
@@ -38,6 +39,7 @@ export default {
   },
   data() {
     return {
+      dropdownShow: true,
       options: [
         {
           label: '黄金糕'

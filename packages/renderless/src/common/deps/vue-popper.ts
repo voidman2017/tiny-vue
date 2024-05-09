@@ -147,6 +147,11 @@ export default (options: IPopperInputParams) => {
       appendArrow(popper)
     }
 
+    /* note: 【下拉菜单显示】-5 初始化会执行 createPopper 执行创建逻辑。
+    如果 props.appendToBody 或 props.popperAppendToBody 为true，表示节点创建插入到 document.body 下。
+      packages/vue/src/dropdown-menu/src/index.ts 中 props.popperAppendToBody 默认值为 true.
+    否则的话会插入到父节点下
+    */
     // 使用的组件比较多，所以 appendToBody popperAppendToBody 这2个属性都要监听
     if (props.appendToBody || props.popperAppendToBody) {
       document.body.appendChild(state.popperElm)
@@ -221,6 +226,7 @@ export default (options: IPopperInputParams) => {
   }
 
   // 注意： 一直以来，state.showPopper 为false时，并未调用doDestory. 像popover只是依赖这个值来 给reference元素 v-show一下
+  /* note: 【下拉菜单显示】-4 执行 updatePopper; updatePopper 的核心作用是创建或更新 popper 状态，可以控制 popper 插入的节点位置 */
   watch(
     () => state.showPopper,
     (val) => {

@@ -1,6 +1,6 @@
 <template>
   <div class="demo-timeline">
-    <tiny-time-line :active="active" text-position="right" show-divider="true" space="220px">
+    <tiny-time-line :active="active" text-position="left" show-divider="true" space="220px">
       <tiny-timeline-item v-for="(item, i) in data" :key="i" :node="item" @click="normalClick(i)">
         <template #description>
           <div class="my-description">
