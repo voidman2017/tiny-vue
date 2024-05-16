@@ -72,7 +72,7 @@ export const getStatusCls =
   }
 
 /**
- * 这里之所以使用map而不是使用reverse，是为了保存源数据的排序不变，今改变组件内部渲染顺序
+ * 这里之所以使用map而不是使用reverse，是为了保存源数据的排序不变，只改变组件内部渲染顺序
  * @param param0
  * @returns
  */

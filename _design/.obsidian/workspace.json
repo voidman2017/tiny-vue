@@ -8,27 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "85a6bbc6501d8597",
+            "id": "1d0e5b0f3b8efcd7",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "dropdown/Drawing 2024-05-08 10.47.26.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "03f043cdd970f59b",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "carousel/Drawing 2024-05-09 13.50.31.excalidraw.md"
+                "file": "timeline/Drawing 2024-05-07 09.44.20.excalidraw.md"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "carousel/Drawing 2024-05-09 13.50.31.excalidraw.md",
+                "file": "timeline/Drawing 2024-05-07 09.44.20.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "carousel/Drawing 2024-05-09 13.50.31.excalidraw.md",
+                "file": "timeline/Drawing 2024-05-07 09.44.20.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "carousel/Drawing 2024-05-09 13.50.31.excalidraw.md"
+                "file": "timeline/Drawing 2024-05-07 09.44.20.excalidraw.md"
               }
             }
           }
@@ -156,16 +145,26 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "03f043cdd970f59b",
+  "active": "000b0b657a0375a2",
   "lastOpenFiles": [
+    "collapse/【HUI】Vue3专项Collapse组件方案详细设计说明书-202404184686-v1.0.doc",
+    "collapse/【HUI】Vue3专项Timeline组件方案详细设计说明书-202404184683-v1.0.doc",
     "dropdown/Drawing 2024-05-08 10.47.26.excalidraw.md",
+    "timeline/【HUI】Vue3专项Timeline组件方案详细设计说明书-202404184683-v1.0.doc",
+    "timeline/【HUI】Vue3专项Dropdown组件方案详细设计说明书-202404184683-v1.0.doc",
+    "timeline/【HUI】Vue3专项Dropdown组件方案详细设计说明书-202404184684-v1.0.doc",
     "carousel/Drawing 2024-05-09 13.50.31.excalidraw.md",
-    "carousel",
-    "timeline/Drawing 2024-05-07 09.44.20.excalidraw.md",
+    "collapse/Drawing 2024-05-10 09.34.54.excalidraw.md",
+    "vue3组件库整体方案设计/未命名.md",
+    "vue3组件库整体方案设计",
+    "dropdown/【HUI】Vue3专项Dropdown组件方案详细设计说明书-202404184684-v1.0.doc",
+    "dropdown/【HUI】Vue3专项Dropdown组件方案详细设计说明书-202404184685-v1.0.doc",
+    "dropdown/【HUI】Vue3专项Carousel走马灯组件方案详细设计说明书-202404184685-v1.0.doc",
+    "carousel/【HUI】Vue3专项Carousel走马灯组件方案详细设计说明书-202404184685-v1.0.doc",
+    "Pasted Image 20240513143351_711.png",
     "Pasted Image 20240509134352_273.png",
-    "dropdown/dropdown.xmind",
-    "dropdown/timeline.xmind",
-    "dropdown",
+    "carousel/carousel走马灯组件.xmind",
+    "timeline/Drawing 2024-05-07 09.44.20.excalidraw.md",
     "Pasted Image 20240507185556_331.png",
     "Pasted Image 20240507190001_346.png",
     "Pasted Image 20240507185844_332.png",
