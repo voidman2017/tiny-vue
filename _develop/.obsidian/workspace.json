@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "95349a2bc50b708f",
+    "id": "5c3fce855b79cd45",
     "type": "split",
     "children": [
       {
-        "id": "9131af47ee089a9d",
+        "id": "a6735557aa3e8a29",
         "type": "tabs",
         "children": [
           {
-            "id": "078480cfb17ee7a1",
+            "id": "2e5d3b771e0d0866",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vue3组件库整体方案设计/大纲.md",
+                "file": "package.json.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d07c286467e12485",
+    "id": "96fadb603ba00513",
     "type": "split",
     "children": [
       {
-        "id": "8070a4f7a8897f71",
+        "id": "d7b419805d72cdcc",
         "type": "tabs",
         "children": [
           {
-            "id": "000b0b657a0375a2",
+            "id": "07af79ba6c1a80f2",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "bb77f529d2739a00",
+            "id": "f7aac954a08e082b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "7858935a8c0a1226",
+            "id": "1c2775b8acef7106",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,20 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "7df657ce4fba8344",
+    "id": "e672f9257ef4b9d5",
     "type": "split",
     "children": [
       {
-        "id": "233d43956b915b43",
+        "id": "6bfc5e43809cc457",
         "type": "tabs",
         "children": [
           {
-            "id": "b2e61edbd66c4e5a",
+            "id": "c0d8070fcbce1d65",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vue3组件库整体方案设计/大纲.md",
+                "file": "package.json.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +97,19 @@
             }
           },
           {
-            "id": "38662620bef624e5",
+            "id": "67afba375988c125",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vue3组件库整体方案设计/大纲.md",
+                "file": "package.json.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "838c791915f0e70d",
+            "id": "15bc4952ee6d4e03",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,12 +120,12 @@
             }
           },
           {
-            "id": "3e912022aeef4c83",
+            "id": "6ccb9e790e365c84",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "vue3组件库整体方案设计/大纲.md"
+                "file": "package.json.md"
               }
             }
           }
@@ -133,8 +133,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -143,33 +142,9 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "078480cfb17ee7a1",
-  "lastOpenFiles": [
-    "collapse/Drawing 2024-05-10 09.34.54.excalidraw.md",
-    "vue3组件库整体方案设计/【终端平台- HUI】HUI Vue3组件库设计方案.docx",
-    "timeline/Drawing 2024-05-07 09.44.20.excalidraw.md",
-    "collapse/【HUI】Vue3专项Collapse组件方案详细设计说明书-202404184686-v1.0.doc",
-    "collapse/【HUI】Vue3专项Timeline组件方案详细设计说明书-202404184683-v1.0.doc",
-    "dropdown/Drawing 2024-05-08 10.47.26.excalidraw.md",
-    "timeline/【HUI】Vue3专项Timeline组件方案详细设计说明书-202404184683-v1.0.doc",
-    "timeline/【HUI】Vue3专项Dropdown组件方案详细设计说明书-202404184683-v1.0.doc",
-    "timeline/【HUI】Vue3专项Dropdown组件方案详细设计说明书-202404184684-v1.0.doc",
-    "carousel/Drawing 2024-05-09 13.50.31.excalidraw.md",
-    "vue3组件库整体方案设计/大纲.md",
-    "vue3组件库整体方案设计",
-    "dropdown/【HUI】Vue3专项Dropdown组件方案详细设计说明书-202404184684-v1.0.doc",
-    "dropdown/【HUI】Vue3专项Dropdown组件方案详细设计说明书-202404184685-v1.0.doc",
-    "dropdown/【HUI】Vue3专项Carousel走马灯组件方案详细设计说明书-202404184685-v1.0.doc",
-    "Pasted Image 20240513143351_711.png",
-    "Pasted Image 20240509134352_273.png",
-    "Pasted Image 20240507185556_331.png",
-    "Pasted Image 20240507190001_346.png",
-    "Pasted Image 20240507185844_332.png",
-    "timeline/未命名.canvas",
-    "未命名.canvas"
-  ]
+  "active": "2e5d3b771e0d0866",
+  "lastOpenFiles": []
 }
