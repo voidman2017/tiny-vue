@@ -1,7 +1,7 @@
 # scripts
 ## preinstall
 ## postinstall
-## prepare
+## prepare™
 
 ## bootstrap
 
