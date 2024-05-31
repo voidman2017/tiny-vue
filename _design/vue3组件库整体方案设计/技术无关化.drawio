@@ -1,0 +1,243 @@
+<mxfile host="Electron" modified="2024-05-29T10:02:14.377Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.21 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="DtVv1dDJvEJo3LEQc5dD" version="22.1.21" type="device">
+  <diagram name="第 1 页" id="Cykjuw2FFscTHz3usnXw">
+    <mxGraphModel dx="1219" dy="888" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-1" target="F0Dob9joJ_F_ZiPR7jd0-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-1" value="" style="shape=actor;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="-14" y="343" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-4" target="F0Dob9joJ_F_ZiPR7jd0-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-4" target="F0Dob9joJ_F_ZiPR7jd0-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-4" target="F0Dob9joJ_F_ZiPR7jd0-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-4" target="F0Dob9joJ_F_ZiPR7jd0-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-4" value="引入组件" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="94" y="343" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-6" target="F0Dob9joJ_F_ZiPR7jd0-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-6" value="自动导入" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="282" y="204" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-8" target="F0Dob9joJ_F_ZiPR7jd0-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-8" value="多组件引入" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="282" y="303" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-10" target="F0Dob9joJ_F_ZiPR7jd0-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-10" value="单组件引入" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="282" y="403" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-34" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-11" target="F0Dob9joJ_F_ZiPR7jd0-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-11" value="完整引入" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="282" y="503" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-16" value="组件库" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="494" y="-81" width="186" height="267" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-46" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="727" y="334.66666666666674" as="targetPoint" />
+            <mxPoint x="676" y="-72.49999999999977" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="676" y="-29" />
+              <mxPoint x="728" y="-29" />
+              <mxPoint x="728" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-17" value="整包&lt;br&gt;@hui3/vue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="506" y="-53" width="163" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-18" value="单包" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="505" y="10" width="165" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-43" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="753.3333333333335" y="434.66666666666674" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-19" value="@hui3/button" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="522.5" y="39" width="129" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-20" value="@hui3/table" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="523" y="72" width="129" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-44" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="435" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-21" value="@hui3/select" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="523" y="105" width="129" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-22" value="..." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="524" y="138" width="129" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="853" y="234" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-51" value="根据业务代码自动引入" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F0Dob9joJ_F_ZiPR7jd0-42">
+          <mxGeometry x="-0.0042" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-23" value="@hui3/unplugin-tiny-vue插件" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="478.5" y="204" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="853" y="333" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-47" value="tree-shaking" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F0Dob9joJ_F_ZiPR7jd0-40">
+          <mxGeometry x="-0.0042" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-25" value="import {button,select} from &#39;@hui3/vue&#39;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="478.5" y="303" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="856" y="433" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-52" value="引入单组件文件" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F0Dob9joJ_F_ZiPR7jd0-38">
+          <mxGeometry x="0.0123" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-29" value="import button from &#39;@hui3/button&#39;&lt;br&gt;import select from &#39;@hui3/select&#39;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="478.5" y="403" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-33">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="859" y="533" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-54" value="无法tree-shaking" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F0Dob9joJ_F_ZiPR7jd0-36">
+          <mxGeometry x="-0.1323" y="-1" relative="1" as="geometry">
+            <mxPoint x="8" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-33" value="import hui3 from &#39;@hui3/vue&#39;&lt;br&gt;app.use(hui3)" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="477" y="503" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-50" value="" style="endArrow=classic;html=1;rounded=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" target="F0Dob9joJ_F_ZiPR7jd0-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="711" y="233" as="sourcePoint" />
+            <mxPoint x="709" y="-63" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="711" y="-18" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-45" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="F0Dob9joJ_F_ZiPR7jd0-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="769.166666666667" y="533" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-55" value="推荐：&lt;br&gt;组件都是自动按需导入的&lt;br&gt;无需手动导入&lt;br&gt;且不用担心项目体积变得太大" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="866" y="199" width="174" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-56" value="需要配置配置，减少组件库打包后的体积" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="866" y="320" width="234" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-57" value="每次新增组件需要添加单包组件模块" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="866" y="420" width="210" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-58" value="不推荐：失去tree-shaking能力，打包后会有冗余代码" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="866" y="523" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-64" value="组件模板" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="303" y="866" width="211" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-65" value="vue模板" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="311" y="904" width="94" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-66" value="react模板" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="412" y="904" width="94" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-67" value="适配层" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="636" y="866" width="211" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-68" value="组件逻辑" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="636" y="1062" width="211" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-69" value="vue逻辑" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="653" y="1128" width="78" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-71" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=1;fontSize=13;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="903.17" as="sourcePoint" />
+            <mxPoint x="625" y="903.17" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-73" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;1&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=17;" vertex="1" connectable="0" parent="F0Dob9joJ_F_ZiPR7jd0-71">
+          <mxGeometry x="-0.0702" y="-3" relative="1" as="geometry">
+            <mxPoint x="-3" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-74" value="4" style="shape=flexArrow;endArrow=classic;html=1;rounded=1;fontSize=13;fillColor=#fa6800;strokeColor=#C73500;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="616" y="952" as="sourcePoint" />
+            <mxPoint x="526" y="952" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-75" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;4&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=17;" vertex="1" connectable="0" parent="F0Dob9joJ_F_ZiPR7jd0-74">
+          <mxGeometry x="-0.0702" y="-3" relative="1" as="geometry">
+            <mxPoint x="-4" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-78" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=1;fontSize=13;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="698.5" y="987" as="sourcePoint" />
+            <mxPoint x="698.5" y="1055" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-80" value="2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="F0Dob9joJ_F_ZiPR7jd0-78">
+          <mxGeometry x="-0.0754" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-81" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=1;fontSize=13;fillColor=#fa6800;strokeColor=#C73500;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="783" y="1053" as="sourcePoint" />
+            <mxPoint x="783.48" y="984" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-82" value="3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="F0Dob9joJ_F_ZiPR7jd0-81">
+          <mxGeometry x="-0.0754" y="-1" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-83" value="react逻辑" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="753" y="1128" width="78" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="F0Dob9joJ_F_ZiPR7jd0-84" value="无关化逻辑" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="653" y="1087" width="177" height="32" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
