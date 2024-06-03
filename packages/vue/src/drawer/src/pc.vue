@@ -34,6 +34,7 @@
           zIndex
         }"
         v-show="visible"
+        v-if="state.created"
       >
         <div data-tag="drawer-drag-bar" ref="dragBar" v-if="dragable" :class="['tiny-drawer__drag-bar']"></div>
 
@@ -114,6 +115,7 @@ export default defineComponent({
   props: [
     ...props,
     'visible',
+    'visibleType',
     'title',
     'showHeader',
     'showFooter',

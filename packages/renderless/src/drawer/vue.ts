@@ -23,7 +23,9 @@ import type {
   IDrawerCT
 } from '@/types'
 
-export const api = ['state', 'close', 'confirm', 'handleClose']
+import { useVisible } from './useVisible.ts'
+
+export const api = ['state', 'close', 'confirm', 'handleClose', 'created']
 
 export const renderless = (
   props: IDrawerProps,
@@ -40,6 +42,8 @@ export const renderless = (
     computedWidth: computed(() => api.computedWidth()),
     btnOrderReversed: vm.theme === 'saas' || designConfig?.state?.btnOrderReversed
   })
+
+  useVisible({ emit, state, props, watch }, 'visible')
 
   Object.assign(api, {
     state,

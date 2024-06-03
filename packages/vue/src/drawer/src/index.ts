@@ -17,6 +17,10 @@ export const drawerProps = {
     type: Object,
     default: () => $constants
   },
+  visibleType: {
+    type: Number,
+    default: 3
+  },
   visible: {
     type: Boolean,
     default: false
